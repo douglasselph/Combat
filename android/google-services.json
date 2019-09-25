@@ -1,0 +1,204 @@
+{
+  "project_info": {
+    "project_number": "387042158367",
+    "firebase_url": "https://call-asistant.firebaseio.com",
+    "project_id": "call-asistant",
+    "storage_bucket": "call-asistant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387042158367:android:f6488382dd32c6b8",
+        "android_client_info": {
+          "package_name": "com.callassistant.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "387042158367-dvc9kpa7q33jra8h14c7glojkqe4e1u7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.callassistant.android",
+            "certificate_hash": "d2c3147dd4703b1461d7c719691fb211a48bf6c8"
+          }
+        },
+        {
+          "client_id": "387042158367-suk2ccn23bt88ukv2id1ncn0aeeg0mfg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.callassistant.android",
+            "certificate_hash": "7caaedb9f5ddd32955b344b0f06e77ec5f798acb"
+          }
+        },
+        {
+          "client_id": "387042158367-rp07kja8v10120bp4i8r4gjip41tcn68.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.callassistant.android",
+            "certificate_hash": "db4f90c5840ae97a87c817648f5fcfc0a019f344"
+          }
+        },
+        {
+          "client_id": "387042158367-jga64uv9pav1tcpcdiqrqpq9kku46m8d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.callassistant.android",
+            "certificate_hash": "2551d319eeb803c885d4b98b8d1d966cacf7cac6"
+          }
+        },
+        {
+          "client_id": "387042158367-e3hb0okrqam5hivnspf23h07uemrak81.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOggg-e50Xx-P5JEU_O0sexM_PjItWdk8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "387042158367-rnujp40m4c50qvrofv8lsvn7e51jqjtm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "387042158367-8dmvk5rjqfmj8aqopacm2ob87k0vp766.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tipsolutions.CallAssistant"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387042158367:android:e775cd451136fd9c",
+        "android_client_info": {
+          "package_name": "com.tipsolutions.assistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "387042158367-66a2j7olephmdpkboiojpas7nhg4i74v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tipsolutions.assistant",
+            "certificate_hash": "d2c3147dd4703b1461d7c719691fb211a48bf6c8"
+          }
+        },
+        {
+          "client_id": "387042158367-57b0irhf8pp4bnmagoaqi35vi1k0oduf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tipsolutions.assistant",
+            "certificate_hash": "1254ffe8b2a6fe8679478d7f6fc3acbda3c4ed95"
+          }
+        },
+        {
+          "client_id": "387042158367-e3hb0okrqam5hivnspf23h07uemrak81.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOggg-e50Xx-P5JEU_O0sexM_PjItWdk8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "387042158367-rnujp40m4c50qvrofv8lsvn7e51jqjtm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "387042158367-8dmvk5rjqfmj8aqopacm2ob87k0vp766.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tipsolutions.CallAssistant"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387042158367:android:13684d196eefef86",
+        "android_client_info": {
+          "package_name": "com.tipsolutions.smartdemosam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "387042158367-qukigq5tg3ogoijb8gup0bgjiq4gt7jq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tipsolutions.smartdemosam",
+            "certificate_hash": "d2c3147dd4703b1461d7c719691fb211a48bf6c8"
+          }
+        },
+        {
+          "client_id": "387042158367-gkcassurj6d72p170js5m9h41qq1d021.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tipsolutions.smartdemosam",
+            "certificate_hash": "7caaedb9f5ddd32955b344b0f06e77ec5f798acb"
+          }
+        },
+        {
+          "client_id": "387042158367-e3hb0okrqam5hivnspf23h07uemrak81.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOggg-e50Xx-P5JEU_O0sexM_PjItWdk8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "387042158367-rnujp40m4c50qvrofv8lsvn7e51jqjtm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "387042158367-8dmvk5rjqfmj8aqopacm2ob87k0vp766.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tipsolutions.CallAssistant"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

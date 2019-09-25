@@ -1,0 +1,119 @@
+buildscript {
+    ext {
+        kotlinVersion = "1.3.50"
+    }
+    repositories {
+//        mavenLocal()
+//        mavenCentral()
+//        maven { url "https://plugins.gradle.org/m2/" }
+//        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+//        jcenter()
+//        google()
+
+        jcenter()
+        mavenCentral()
+        google()
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url 'https://jitpack.io' }
+        maven { url "https://oss.sonatype.org/content/groups/public/" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+//        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.8.2'
+//        classpath 'com.google.gms:google-services:4.3.2'
+//        classpath 'io.fabric.tools:gradle:1.29.0'
+    }
+}
+
+allprojects {
+
+    version = '1.0'
+    ext {
+        appName = "combat-training"
+        gdxVersion = '1.9.10'
+        roboVMVersion = '2.3.7'
+        box2DLightsVersion = '1.4'
+        ashleyVersion = '1.7.0'
+        aiVersion = '1.8.0'
+    }
+    repositories {
+//        mavenLocal()
+//        mavenCentral()
+//        jcenter()
+//        google()
+//        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+//        maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+
+        jcenter()
+        mavenCentral()
+        maven { url 'https://maven.google.com' }
+        maven { url "https://jitpack.io" }
+        maven { url "https://oss.sonatype.org/content/groups/public/" }
+    }
+}
+
+project(":desktop") {
+//    apply plugin: "java-library"
+    apply plugin: "kotlin"
+
+    dependencies {
+        implementation project(":core")
+        api "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+        api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+        api "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
+        api "com.badlogicgames.gdx:gdx-tools:$gdxVersion"
+        api "de.tomgrill.gdxdialogs:gdx-dialogs-desktop:1.2.5"
+    }
+}
+
+project(":android") {
+    apply plugin: "android"
+    apply plugin: 'kotlin-android'
+    apply plugin: 'kotlin-android-extensions'
+    apply plugin: "kotlin-kapt"
+//    apply plugin: 'io.fabric'
+//    apply plugin: 'com.google.gms.google-services'
+
+    configurations { natives }
+
+    dependencies {
+        implementation project(":core")
+        api "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-arm64-v8a"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
+        api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+        natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-armeabi"
+        natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-armeabi-v7a"
+        natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-arm64-v8a"
+        natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-x86"
+        natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-x86_64"
+        api "com.badlogicgames.ashley:ashley:$ashleyVersion"
+        api "de.tomgrill.gdxdialogs:gdx-dialogs-android:1.2.5"
+        api "com.badlogicgames.box2dlights:box2dlights:$box2DLightsVersion"
+
+    }
+}
+
+project(":core") {
+//    apply plugin: "java-library"
+    apply plugin: "kotlin"
+
+    dependencies {
+        api "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+        api "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
+        api "com.badlogicgames.gdx:gdx:$gdxVersion"
+        api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+        api "com.underwaterapps.overlap2druntime:overlap2d-runtime-libgdx:0.1.0"
+        api "net.dermetfan.libgdx-utils:libgdx-utils:0.13.4"
+        api "net.dermetfan.libgdx-utils:libgdx-utils-box2d:0.13.4"
+        api "com.badlogicgames.ashley:ashley:$ashleyVersion"
+        api "de.tomgrill.gdxdialogs:gdx-dialogs-core:1.2.5"
+        api "com.kotcrab.vis:vis-ui:1.3.0"
+        api "com.badlogicgames.box2dlights:box2dlights:$box2DLightsVersion"
+
+    }
+}
