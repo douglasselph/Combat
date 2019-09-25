@@ -21,21 +21,21 @@ class TestZombieModel : ApplicationAdapter() {
         private const val ANIMATION = "Armature|Armature|mixamo.com|Layer0"
     }
 
-    private var camera: PerspectiveCamera? = null
-    private var modelBatch: ModelBatch? = null
-    private var model: Model? = null
-    private var modelInstance: ModelInstance? = null
-    private var environment: Environment? = null
-    private var controller: AnimationController? = null
+    private lateinit var camera: PerspectiveCamera
+    private lateinit var modelBatch: ModelBatch
+    private lateinit var model: Model
+    private lateinit var modelInstance: ModelInstance
+    private lateinit var environment: Environment
+    private lateinit var controller: AnimationController
 
     override fun create() {
         camera = PerspectiveCamera(75f, Gdx.graphics.width.toFloat(), Gdx.graphics.height.toFloat())
 
-        camera!!.position.set(0f, 100f, 100f)
-        camera!!.lookAt(0f, 100f, 0f)
+        camera.position.set(0f, 100f, 200f)
+        camera.lookAt(0f, 100f, 0f)
 
-        camera!!.near = 0.1f
-        camera!!.far = 300.0f
+        camera.near = 0.1f
+        camera.far = 300.0f
 
         modelBatch = ModelBatch()
 
@@ -43,13 +43,13 @@ class TestZombieModel : ApplicationAdapter() {
 
         val modelLoader = G3dModelLoader(jsonReader)
         model = modelLoader.loadModel(Gdx.files.getFileHandle(ZOMBIE, Files.FileType.Internal))
-        modelInstance = ModelInstance(model!!)
+        modelInstance = ModelInstance(model, 0f, 100f, 0f)
 
         environment = Environment()
-        environment!!.set(ColorAttribute(ColorAttribute.AmbientLight, 0.8f, 0.8f, 0.8f, 1.0f))
+        environment.set(ColorAttribute(ColorAttribute.AmbientLight, 0.8f, 0.8f, 0.8f, 1.0f))
 
         controller = AnimationController(modelInstance)
-        controller!!.setAnimation(ANIMATION, -1, object : AnimationController.AnimationListener {
+        controller.setAnimation(ANIMATION, -1, object : AnimationController.AnimationListener {
             override fun onEnd(animation: AnimationController.AnimationDesc) {}
 
             override fun onLoop(animation: AnimationController.AnimationDesc) {
